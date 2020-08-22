@@ -1,3 +1,4 @@
+import { FirebaseConfig } from './FirebaseConfig';
 import { MpgItemType } from "./MpgItemType";
 import MpgRel, { MpgRelType, MpgRelData, MpgExternalRelData } from "./MpgRel";
 import MpgUser, { MpgUserData } from "./MpgUser";
@@ -140,16 +141,16 @@ export default class MpgGraphData {
       // need to understand how not put these values in the source file
       // documentation states that:
       // The Firebase config object contains unique, but non-secret identifiers for your Firebase project.
-      const firebaseConfig = {
-        apiKey: "AIzaSyBmL90LnwnHO2CJ4xRKV9dttX_-SCGD-aA",
-        authDomain: "ahmedfattahsydgraph37.firebaseapp.com",
-        databaseURL: "https://ahmedfattahsydgraph37.firebaseio.com",
-        projectId: "ahmedfattahsydgraph37",
-        storageBucket: "ahmedfattahsydgraph37.appspot.com",
-        messagingSenderId: "363893096993",
-        appId: "1:363893096993:web:ebd283d828838483cb1960",
-      };
-      firebase.initializeApp(firebaseConfig);
+      // const firebaseConfig = {
+      //   apiKey: "AIzaSyBmL90LnwnHO2CJ4xRKV9dttX_-SCGD-aA",
+      //   authDomain: "ahmedfattahsydgraph37.firebaseapp.com",
+      //   databaseURL: "https://ahmedfattahsydgraph37.firebaseio.com",
+      //   projectId: "ahmedfattahsydgraph37",
+      //   storageBucket: "ahmedfattahsydgraph37.appspot.com",
+      //   messagingSenderId: "363893096993",
+      //   appId: "1:363893096993:web:ebd283d828838483cb1960",
+      // };
+      firebase.initializeApp(FirebaseConfig);
       // this enable local persistence
       await firebase.firestore().enablePersistence();
       this.auth = firebase.auth();

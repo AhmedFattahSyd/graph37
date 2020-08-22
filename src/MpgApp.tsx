@@ -79,7 +79,7 @@ export default class MpgApp extends React.Component<MpgAppProps, MpgAppState> {
   private maxDisplayWidth = 10000;
   private viewMargin = 5;
   private startTime: number = 0;
-  private appVersion = "My Graph - Version: Alpha (37.071) - 18 August 2020";
+  private appVersion = "My Graph - Version: Alpha (37.072) - 22 August 2020";
   private privateMode = true
   constructor(props: MpgAppProps) {
     super(props);
